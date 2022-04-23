@@ -4,6 +4,8 @@ import "../styles/Chatcontainer.css";
 import InputChat from "./Input";
 import useLocalStorage from "../hooks/useLocalStorage";
 import io from "socket.io-client";
+import ScrollToBottom from "react-scroll-to-bottom";
+import ScrollableFeed from "react-scrollable-feed";
 
 let socket;
 
@@ -12,7 +14,7 @@ const ChatContainer = ({ currentChat, user }) => {
 	const [token, setToken] = useLocalStorage("token", "");
 	const [messages, setMessages] = useState([]);
 
-	let ENDPOINT = "http://localhost:8000";
+	let ENDPOINT = "https://chatappserverratul.herokuapp.com/";
 
 	useEffect(() => {
 		socket = io(ENDPOINT);
@@ -37,7 +39,7 @@ const ChatContainer = ({ currentChat, user }) => {
 	useEffect(() => {
 		const fetchchats = async () => {
 			const res = await axios.post(
-				"http://localhost:8000/api/chat/getChat",
+				"https://chatappserverratul.herokuapp.com/api/chat/getChat",
 				{
 					sender: user._id,
 					to: currentChat._id,
@@ -57,7 +59,7 @@ const ChatContainer = ({ currentChat, user }) => {
 	}, [currentChat]);
 
 	const sendChatMessage = () => {
-		axios.post("http://localhost:8000/api/chat/postChat", {
+		axios.post("https://chatappserverratul.herokuapp.com/api/chat/postChat", {
 			message: message,
 			sender: user._id,
 			to: currentChat._id,
@@ -72,21 +74,24 @@ const ChatContainer = ({ currentChat, user }) => {
 	return (
 		<div className='chatContainer'>
 			<div className='chatMessage'>
-				{messages?.map((message, i) => {
-					return (
-						<div
-							key={i}
-							className={
-								message.sender === token.user._id
-									? "chatContainer__to"
-									: "chatContainer__from"
-							}
-						>
-							{message.message}
-						</div>
-					);
-				})}
+				<ScrollableFeed>
+					{messages?.map((message, i) => {
+						return (
+							<div
+								key={i}
+								className={
+									message.sender === token.user._id
+										? "chatContainer__to"
+										: "chatContainer__from"
+								}
+							>
+								{message.message}
+							</div>
+						);
+					})}
+				</ScrollableFeed>
 			</div>
+
 			{/* <div className='chatContainer__from'>ratul</div>
 			<div className='chatContainer__to'>sharna</div>
 			<div className='chatContainer__from'>ratul</div>

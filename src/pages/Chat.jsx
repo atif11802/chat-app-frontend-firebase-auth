@@ -23,7 +23,7 @@ const Chat = () => {
 		if (token.user) {
 			const fetchUsers = async () => {
 				const { data } = await axios.get(
-					"http://localhost:8000/api/user/getusers",
+					"https://chatappserverratul.herokuapp.com/api/user/getusers",
 					{
 						headers: {
 							Authorization: `Bearer ${token.token}`,

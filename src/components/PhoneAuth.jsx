@@ -94,7 +94,7 @@ const PhoneAuth = () => {
 
 	const handliSignUp = () => {
 		axios
-			.post("http://localhost:8000/api/auth/signup", {
+			.post("https://chatappserverratul.herokuapp.com/api/auth/signup", {
 				name,
 				email,
 				password,

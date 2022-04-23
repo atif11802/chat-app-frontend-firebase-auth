@@ -36,7 +36,7 @@ const GoogleLogin = () => {
 					const token = await idToken;
 					axios
 						.post(
-							"http://localhost:8000/api/auth/googlelogin",
+							"https://chatappserverratul.herokuapp.com/api/auth/googlelogin",
 							{},
 							{
 								headers: {

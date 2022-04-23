@@ -31,7 +31,7 @@ const FacebookLogin = () => {
 				user.getIdToken().then(async function (idToken) {
 					await axios
 						.post(
-							"http://localhost:8000/api/auth/facebooklogin",
+							"https://chatappserverratul.herokuapp.com/api/auth/facebooklogin",
 							{},
 							{
 								headers: {
