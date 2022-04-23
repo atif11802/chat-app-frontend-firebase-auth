@@ -1,0 +1,12 @@
+.contact {
+	width: 100%;
+	padding: 10px;
+	padding: 2vh 2vw;
+	background-color: #999;
+	margin: 1px;
+	cursor: pointer;
+}
+
+.selected {
+	background-color: #666;
+}

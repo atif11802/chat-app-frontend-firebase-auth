@@ -1,0 +1,25 @@
+.chat {
+	height: 100vh;
+	background-color: #fc466b;
+	width: 100vw;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+}
+
+.chat-box {
+	height: 80vh;
+	width: 80vw;
+	background-color: #2f0743;
+	display: flex;
+}
+
+.chat-users {
+	flex: 0.3;
+}
+
+.chat-messages {
+	flex: 0.7;
+}

@@ -1,0 +1,21 @@
+.chatContainer {
+	width: 100%;
+
+	overflow: hidden;
+	padding: 1rem;
+}
+.chatMessage {
+	height: 70vh;
+	overflow-y: scroll;
+	display: flex;
+	flex-direction: column;
+}
+.chatContainer__from {
+	display: flex;
+	justify-content: flex-start;
+}
+
+.chatContainer__to {
+	display: flex;
+	justify-content: flex-end;
+}
