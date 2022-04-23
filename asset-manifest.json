@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/chat-app-frontend-firebase-auth/static/css/main.f550c33a.css",
+    "main.js": "/chat-app-frontend-firebase-auth/static/js/main.2b00a6a6.js",
+    "static/media/AS002803_15.gif": "/chat-app-frontend-firebase-auth/static/media/AS002803_15.de05566643e8b6c9a003.gif",
+    "index.html": "/chat-app-frontend-firebase-auth/index.html",
+    "main.f550c33a.css.map": "/chat-app-frontend-firebase-auth/static/css/main.f550c33a.css.map",
+    "main.2b00a6a6.js.map": "/chat-app-frontend-firebase-auth/static/js/main.2b00a6a6.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.f550c33a.css",
+    "static/js/main.2b00a6a6.js"
+  ]
+}
